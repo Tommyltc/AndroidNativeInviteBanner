@@ -1,0 +1,31 @@
+{
+  "short_name": "Branma",
+  "name": "Branma",
+  "icons": [
+    {
+      "src": "/app_icon_144.png",
+      "type": "image\/png",
+      "sizes": "144x144",
+      "density": 4.0
+    },
+    {
+      "src": "/app_icon.png",
+      "type": "image\/png",
+      "sizes": "192x192",
+      "density": 4.0
+    }
+  ],
+  "prefer_related_applications": true,
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.pccw.clubsim"
+    }
+  ],
+  "orientation": "portrait",
+  "start_url": "\/",
+  "background_color": "white",
+  "display": "standalone",
+  "scope": "\/",
+  "theme_color": "#3367D6"
+}
