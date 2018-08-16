@@ -24,7 +24,7 @@
         navigator.serviceWorker.register('service-worker.js')
           .then(function(reg){
             console.log("Yes, it did.");
-            alert("Yes, it did.");
+            $("#serviceWorker").
           }).catch(function(err) {
             console.log("No it didn't. This happened: ", err)
           });
@@ -37,7 +37,7 @@
       <div class="card mt-2">
         <div class="card-body">
           <h5 class="card-title">ClubSim Deeplink</h5>
-
+          <span class="btn btn-primary" id="serviceWorker">ServiceWorker</span>
           <a class="btn btn-primary" role="button" href="clubsim://main">Main</a>
           <a class="btn btn-primary" role="button" href="clubsim://login">Login</a>
           <a class="btn btn-primary" role="button" href="clubsim://logino">Old Login</a>
