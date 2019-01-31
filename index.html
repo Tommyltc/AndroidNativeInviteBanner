@@ -30,16 +30,15 @@
             console.log("No it didn't. This happened: ", err)
           });
       }
-      async function check() {
-          let listOfInstalledApps = await navigator.getInstalledRelatedApps();
-          for (const app of listOfInstalledApps) {
-              // These fields are specified by the Web App Manifest spec.
-              console.log('platform:', app.platform);
-              console.log('url:', app.url);
-              console.log('id:', app.id);
-          }
-      }
-      check();
+      let deferredPrompt;
+
+      window.addEventListener('beforeinstallprompt', (e) => {
+          // Prevent Chrome 67 and earlier from automatically showing the prompt
+          e.preventDefault();
+          // Stash the event so it can be triggered later.
+          deferredPrompt = e;
+          console.log("promt");
+      });
     </script>
     <div class="container">
       <div class="page-header pt-3">
