@@ -30,13 +30,16 @@
             console.log("No it didn't. This happened: ", err)
           });
       }
-      let listOfInstalledApps = await navigator.getInstalledRelatedApps();
-      for (const app of listOfInstalledApps) {
-          // These fields are specified by the Web App Manifest spec.
-          console.log('platform:', app.platform);
-          console.log('url:', app.url);
-          console.log('id:', app.id);
+      async function check() {
+          let listOfInstalledApps = await navigator.getInstalledRelatedApps();
+          for (const app of listOfInstalledApps) {
+              // These fields are specified by the Web App Manifest spec.
+              console.log('platform:', app.platform);
+              console.log('url:', app.url);
+              console.log('id:', app.id);
+          }
       }
+      check();
     </script>
     <div class="container">
       <div class="page-header pt-3">
